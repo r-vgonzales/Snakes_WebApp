@@ -1,14 +1,6 @@
-%h1{id: "welcome"}=t('.title')
-%p{id: "welcomep"}= t('.welcome')
+%h1 Add a new pet snake to the database
 
-%h2{id: "pf", onclick: "ToggleText(this)"} Pet Form
-%p{id: "pfp"} Enter details about your pet snake!
-
-%h2{id: "as", onclick: "ToggleText(this)"} All Snakes
-%p{id: "asp"} See all the other pets.
-
-%h2{id: "f", onclick: "ToggleText(this)"} Facts About Snakes
-%p{id: "fp"} See and submit facts about snakes.
+= render 'snakes/form'
 
 %input#smallb{onclick: "SetFontSize('80%')", type: "button", value: "Small"}
 %input#mediumb{onclick: "SetFontSize('100%')", type: "button", value: "Medium"}
@@ -17,4 +9,3 @@
 %p
 %input#Lightb{onclick: "SetPageStyle('Light')", type: "button", value: "Light"}
 %input#Darkb{onclick: "SetPageStyle('Dark')", type: "button", value: "Dark"}
-

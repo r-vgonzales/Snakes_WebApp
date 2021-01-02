@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @snake.name
+%p
+  %b Breed:
+  = @snake.breed
+%p
+  %b Age:
+  = @snake.age
+%p
+  %b Owner email:
+  = @snake.owner_email
+
+= link_to 'Edit', edit_snake_path(@snake)
+\|
+= link_to 'Back', snakes_path

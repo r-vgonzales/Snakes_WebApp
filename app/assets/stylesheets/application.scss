@@ -18,11 +18,12 @@
 
 $font: 'Times New Roman', 'Times', serif;
 $white: #FFFFFF;
-$main-color: #46C6DE;
+$lightblue: #46C6DE;
+$black: #000000;
 
 body {
   font-family: $font;
-  background-color: $main-color;
+  background-color: $lightblue;
   margin: 10px;
   padding: 10px;
 }

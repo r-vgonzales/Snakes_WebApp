@@ -16,6 +16,8 @@
     = csrf_meta_tags
 
   %body
-
-    =yield
+    =render "shared/header"
+    %div#main_content
+      =yield
+    =render "shared/footer"
 

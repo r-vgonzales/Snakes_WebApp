@@ -1,0 +1,6 @@
+%h1 snakes
+%ul
+  - @snakes.each do |snake|
+    %li
+      = snake.name + " " + snake.breed + " " + snake.age.to_s + " " + snake.owner_email
+      = link_to "Hide", "", class: 'hide', data: {'js-hide-link' => true}
