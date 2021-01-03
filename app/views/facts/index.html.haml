@@ -1,0 +1,25 @@
+%h1 Listing facts
+
+%table
+  %thead
+    %tr
+      %th Statement
+      %th Additional info
+      %th Author
+      %th
+      %th
+      %th
+
+  %tbody
+    - @facts.each do |fact|
+      %tr
+        %td= fact.statement
+        %td= fact.additional_info
+        %td= fact.author
+        %td= link_to 'Show', fact
+        %td= link_to 'Edit', edit_fact_path(fact)
+        %td= link_to 'Destroy', fact, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Fact', new_fact_path

@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Statement:
+  = @fact.statement
+%p
+  %b Additional info:
+  = @fact.additional_info
+%p
+  %b Author:
+  = @fact.author
+
+= link_to 'Edit', edit_fact_path(@fact)
+\|
+= link_to 'Back', facts_path
