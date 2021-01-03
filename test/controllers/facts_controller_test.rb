@@ -17,10 +17,13 @@ class FactsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create fact" do
     assert_difference('Fact.count') do
-      post facts_url, params: { fact: { additional_info: @fact.additional_info, author: @fact.author, statement: @fact.statement } }
+      #post facts_url, params: { fact: { additional_info: @fact.additional_info, author: @fact.author, statement: @fact.statement } }
+      #post :create, fact {additional_info: @fact.additional_info, author: @fact.author = "Rio" , statement: @fact.statement = "Snakey snake"} }
+      post facts_url, params: { fact: { additional_info: @fact.additional_info, author: @fact.author, statement: @fact.statement + "hello"} }
     end
 
-    assert_redirected_to fact_url(Fact.last)
+    #assert_redirected_to fact_url(Fact.last)
+    assert_redirected_to fact_path(assigns(:fact))
   end
 
   test "should show fact" do
