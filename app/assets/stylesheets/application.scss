@@ -97,6 +97,46 @@ bar opens*/
   padding: 20px;
 }
 
+/*colours of the odd rows when in plain setting*/
+td.odd.plain{
+  background-color: #80AB82;
+}
+
+/*colours of the even rows when in plain setting*/
+td.even.plain{
+  background-color: #C08497;
+}
+
+/*colours of the odd rows when in bright setting*/
+td.odd.bright{
+  background-color: #FDCFF3;
+}
+
+/*colours of the even rows when in bright setting*/
+td.even.bright{
+  background-color: #DE89BE;
+}
+
+/*colours of the odd rows when in dark setting*/
+td.odd.dark{
+  background-color: #3C3C3C;
+}
+
+/*colours of the even rows when in dark setting*/
+td.even.dark{
+  background-color: #7798AB;
+}
+
+tr{
+  font-size: 1.2em;
+  height: 1.4em;
+}
+
+tr:hover{
+  font-size: 2.0em;
+  height: 2.2em;
+}
+
 /*How nav bar appears on smaller screens, less padding and smaller font size*/
 @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
