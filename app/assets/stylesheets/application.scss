@@ -97,33 +97,35 @@ bar opens*/
   padding: 20px;
 }
 
-/*colours of the odd rows when in plain setting*/
-td.odd.plain{
-  background-color: #80AB82;
-}
-
 /*colours of the even rows when in plain setting*/
-td.even.plain{
+td.odd.plain{
   background-color: #C08497;
 }
 
-/*colours of the odd rows when in bright setting*/
+/*colours of the odd rows when in plain setting*/
+td.even.plain{
+  background-color: #80AB82;
+}
+
+/*colours of the even rows when in bright setting*/
 td.odd.bright{
   background-color: #FDCFF3;
 }
 
-/*colours of the even rows when in bright setting*/
+/*colours of the odd rows when in bright setting*/
 td.even.bright{
   background-color: #DE89BE;
+
 }
 
 /*colours of the odd rows when in dark setting*/
-td.odd.dark{
+td.even.dark{
   background-color: #3C3C3C;
+  color: $white;
 }
 
 /*colours of the even rows when in dark setting*/
-td.even.dark{
+td.odd.dark{
   background-color: #7798AB;
 }
 
