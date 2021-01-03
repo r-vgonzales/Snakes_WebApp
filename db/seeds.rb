@@ -11,3 +11,8 @@ Snake.create(name: "Lilith", breed: "Kingsnake", age: 36, owner_email: "rio@emai
 Snake.create(name: "Phineas", breed: "Blood Python", age: 12, owner_email: "justin@email.com")
 Snake.create(name: "Manny", breed: "Corn Snake", age: 27, owner_email: "kenneth@email.com")
 Snake.create(name: "Sprinkles", breed: "Boa Constrictor", age: 40, owner_email: "bob@email.com")
+
+welcome = Fact.where(statement: 'Welcome').first
+welcome.delete if welcome
+
+basic = Fact.create([statement: 'Welcome', additional_info: 'To the facts about snakes app.', author: 'Rio'])
