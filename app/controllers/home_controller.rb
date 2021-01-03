@@ -7,6 +7,7 @@ class HomeController < ApplicationController
   end
 
   def snktable
+    @snakes = Snake.all
   end
 
   def facts

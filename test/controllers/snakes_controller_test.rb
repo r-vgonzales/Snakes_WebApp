@@ -7,6 +7,7 @@ class SnakesControllerTest < ActionDispatch::IntegrationTest
 
   test "should get index" do
     get snakes_url
+    #get @snake_id
     assert_response :success
   end
 
@@ -35,6 +36,7 @@ class SnakesControllerTest < ActionDispatch::IntegrationTest
 
   test "should update snake" do
     patch snake_url(@snake), params: { snake: { age: @snake.age, breed: @snake.breed, name: @snake.name, owner_email: @snake.owner_email } }
+    #patch "/snakes/"+snake.id.to_s, params: { snake: { age: @snake.age, breed: @snake.breed, name: @snake.name, owner_email: @snake.owner_email} }
     assert_redirected_to snake_url(@snake)
   end
 

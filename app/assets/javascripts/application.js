@@ -17,6 +17,21 @@
 //= require turbolinks
 //= require_tree .
 
+/* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width="250px";
+  document.getElementById("main").style.marginLeft="250px";
+  document.getElementById("main_content").style.marginLeft="250px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav(){
+  document.getElementById("mySidebar").style.width="0";
+  document.getElementById("main").style.marginLeft="0";
+  document.getElementById("main_content").style.marginLeft="0";
+}
+
+/* Validation for when the user input's their pet snake's details */
 function ValidateSnakeForm() {
   $('#SnakeForm').validate({
     rules: {
@@ -65,6 +80,28 @@ function SetPageStyle(val){
     $("*").each(function(i,e){e.style.background = "black"});
     $("*").each(function(i,e){e.style.color = "white"});
   }
+}
+
+function SetTableStyle(sty) {
+  //plain
+  if(sty === 'Plain') {
+    $("td").removeClass("bright");
+    $("td").removeClass("dark");
+    $("td").addClass("plain");
+  }
+   //bright
+   else if (sty ==='Bright') {
+    $("td").removeClass("plain");
+    $("td").removeClass("dark");
+    $("td").addClass("bright");
+  }
+  //dark
+   else {
+    $("td").removeClass("plain");
+    $("td").removeClass("bright");
+    $("td").addClass("dark");
+  }
+
 }
 
 $(document).ready(function()  {
