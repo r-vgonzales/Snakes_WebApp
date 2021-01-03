@@ -32,3 +32,73 @@ h1 {
   text-transform: uppercase;
   text-align: center;
 }
+
+/* Characteristics of sidebar */
+.sidebar {
+  height: 100%; /*100% full height*/
+  width: 0; /*0 width*/
+  position: fixed; /*Stays in place*/
+  z-index: 1; /*Stay on top*/
+  top: 0;
+  left: 0;
+  background-color: #111; /*black*/
+  overflow-x: hidden; /*Disable horizontal scroll*/
+  padding-top: 60px; /*Start content 60px from the top*/
+  transition: 0.5s; /*0.5 second transition effect of appearing from side*/
+}
+
+/*sidebar links*/
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/*When you mouse over the navigation links, the color they change to*/
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/*Position and style of the close button, in top right corner*/
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/*button to open nav bar*/
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover  {
+  background-color: #444;
+}
+
+/*Style of the page when it is pushed to the right when the nav
+bar opens*/
+#main {
+  transition: margin-left .5s; /*transition effect*/
+  padding: 20px;
+}
+
+#main_content {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/*How nav bar appears on smaller screens, less padding and smaller font size*/
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
