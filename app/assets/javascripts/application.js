@@ -112,6 +112,7 @@ $(document).ready(function()  {
  if (document.getElementById('SnakeForm')){
   ValidateSnakeForm();
  }
+
   $('[data-js-hide-link]').click(function(event){
     $(this).parents('li').hide();
     event.preventDefault();

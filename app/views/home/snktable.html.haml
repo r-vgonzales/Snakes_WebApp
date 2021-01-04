@@ -16,7 +16,7 @@
     - else
      - row_class = "odd"
 
-    %tr
+    %tr{:class => 'snk_class'}
      %td{:class => "#{row_class} plain"}= snake.name
      %td{:class => "#{row_class} plain"}= snake.breed
      %td{:class => "#{row_class} plain"}= snake.age

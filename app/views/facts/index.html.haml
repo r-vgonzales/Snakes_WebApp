@@ -1,4 +1,6 @@
-%h1 Listing facts
+%h1= t('.title')
+%p= t('.intro')
+%p= t('.cont')
 
 %table
   %thead
@@ -12,7 +14,7 @@
 
   %tbody
     - @facts.each do |fact|
-      %tr
+      %tr{:class => 'f_class'}
         %td= fact.statement
         %td= fact.additional_info
         %td= fact.author
