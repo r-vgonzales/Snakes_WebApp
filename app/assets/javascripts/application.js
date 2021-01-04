@@ -63,6 +63,19 @@ function ValidateSnakeForm() {
   });
 }
 
+function ValidateFactForm() {
+  $('#FactForm').validate({
+    rules:{
+      'fact[statement]': {required:true},
+      'fact[author]': {required:true}
+    },
+    messages:{
+      'fact[statement]': {required: "You must enter a fact",},
+      'fact[author]': {required: "You must enter your name",},
+    }
+  });
+}
+
 function ToggleText(elem){
   $('#'+elem.id+"p").toggle();
 }
@@ -111,6 +124,10 @@ $(document).ready(function()  {
 
  if (document.getElementById('SnakeForm')){
   ValidateSnakeForm();
+ }
+
+ if (document.getElementById('FactForm')){
+    ValidateFactForm();
  }
 
   $('[data-js-hide-link]').click(function(event){
