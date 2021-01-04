@@ -8,7 +8,8 @@
 
   .field
     = f.label :fact
-    = f.text_field :fact
+    %p= @comment.fact.statement
+    = f.hidden_field :fact_id, value: @comment.fact.id
   .field
     = f.label :message
     = f.text_area :message
