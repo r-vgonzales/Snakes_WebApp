@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  breed: MyString
+  name: Luther
+  breed: Cobra
   age: 1
   owner_email: MyString
 
 two:
-  name: MyString
-  breed: MyString
-  age: 1
-  owner_email: MyString
+  name: Jerry
+  breed: Blood Python
+  age: 7
+  owner_email: jesse@email.com

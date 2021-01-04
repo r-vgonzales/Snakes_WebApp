@@ -8,7 +8,7 @@ class FactTest < ActiveSupport::TestCase
   test "should not save empty fact" do
     truth = Fact.new
     truth.save
-    refute fact.valid?
+    refute truth.valid?
   end
 
   test "should save a valid fact, with more information" do
