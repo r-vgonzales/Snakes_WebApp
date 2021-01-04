@@ -1,6 +1,6 @@
 class FactsController < ApplicationController
   before_action :set_fact, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
   # GET /facts
   # GET /facts.json
   def index

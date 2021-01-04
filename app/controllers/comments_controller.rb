@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_fact, only: [:new, :create]
+  before_action :authenticate_user!
 
   # GET /comments
   # GET /comments.json
@@ -14,7 +16,8 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
-    @comment = Comment.new
+    #@comment = @Comment.new
+    @comment = @fact.comments.new
   end
 
   # GET /comments/1/edit
@@ -24,7 +27,8 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @comment = Comment.new(comment_params)
+    #@comment = Comment.new(comment_params)
+    @comment = @fact.comments.new(comment_params)
 
     respond_to do |format|
       if @comment.save
@@ -57,6 +61,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     respond_to do |format|
       format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
+      format.js {flash[:notice] = 'Comment was successfully destroyed.'}
       format.json { head :no_content }
     end
   end
@@ -67,8 +72,13 @@ class CommentsController < ApplicationController
       @comment = Comment.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
-    def comment_params
-      params.require(:comment).permit(:fact_id, :message, :author, :location)
+    def set_fact
+      @fact = Fact.find_by(id: params[:fact_id]) || Fact.find(comment_params[:fact_id])
     end
+
+    # Only allow a list of trusted parameters through
+    def comment_params
+      params.require( :comment ).permit(:fact_id, :message, :author, :location)
+    end
+
 end
