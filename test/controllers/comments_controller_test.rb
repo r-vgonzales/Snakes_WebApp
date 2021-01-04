@@ -11,7 +11,9 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_comment_url
+    #get new_comment_url
+    get @comment.fact_id
+    #get :new, fact_id: @fact
     assert_response :success
   end
 
