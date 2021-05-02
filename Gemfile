@@ -67,3 +67,5 @@ gem 'jquery-rails'
 gem 'jquery-validation-rails'
 
 gem 'rails-controller-testing'
+
+gem 'devise'

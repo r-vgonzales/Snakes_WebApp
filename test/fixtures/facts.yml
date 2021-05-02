@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  user: one
   statement: Fact 1
   additional_info: Hello
   author: Rio
 
 two:
+  user: two
   statement: Fact 2
   additional_info: Hi
   author: Roxanne
